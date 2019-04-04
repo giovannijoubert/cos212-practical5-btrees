@@ -14,14 +14,27 @@ public class Main {
 	t.insert(90);
 	t.insert(70);
 	t.insert(80);
-	System.out.println("Traversal of the constucted tree is : ");
-    	t.traverse();
+
+	System.out.println("Search the constucted tree for 80: ");
+    	BTreeNode result = t.search(80);
+	if (result != null)
+		System.out.println("Found in node " + result);
+	else
+		System.out.println("Not found!");
+	System.out.println("Search the constucted tree for 100: ");
+    	result = t.search(100);
+	if (result != null)
+		System.out.println("Found in node " + result);
+	else
+		System.out.println("Not found!");
 	System.out.println("Structure of the constucted tree is : ");
 	t.print();
 
 	/* Expected Output:
-	Traversal of the constucted tree is :
-	 10 20 30 40 50 60 70 80 90
+	Search the constucted tree for 80:
+	Found in node [70,80,90]
+	Search the constucted tree for 100:
+	Not found!
 	Structure of the constucted tree is :
 	Level 1 [ 40]
 	Level 2 [ 20]
@@ -32,4 +45,7 @@ public class Main {
 	Level 3 [ 70 80 90]
 	*/
     }
+
+
+    
 }

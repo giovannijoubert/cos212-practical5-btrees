@@ -37,13 +37,12 @@ class BTree<T extends Comparable<T>> {
     		}
 	}
 
-	// function to traverse this B-Tree
-    	public void traverse()
+	// function to search a key in this B-Tree
+    	public BTreeNode<T> search(T key)
     	{  
 		if (root != null) 
-		{ 
-			root.traverse();
-			System.out.println();
-		} 
+			return root.search(key);
+		else
+			return null;
 	}
 }
